@@ -1,24 +1,37 @@
+//BUSINESS LOGIC
+
 const beep = "Beep!"
 const boop = "Boop!"
 const neighbor = "Won't you be my neighbor?"
 
 const firstArray = [];
-const input =  3
-const inputString = input.toString()
+const userInput=parseInt($("#numberInput").val());
 
-if (inputString.includes("1")) {
+for (var i = 0; i <= userInput; i++) {
+  firstArray.push(i);
+}
+
+alert(firstArray);
+
+let inputString = firstArray.join("");
+let stringSplit = inputString.split("")
+
+if (stringSplit.includes("1")) {
     alert(beep);
-  } else if (inputString.includes("2")) {
+  } else if (stringSplit.includes("2")) {
     alert(boop);
-  } else if (inputString.includes("3")) {
+  } else if (stringSplit.includes("3")) {
     alert(neighbor);
   } else {
     alert("Nothing happened.");
   }
 
+//UI LOGIC
 
-for (var i = 0; i <= input; i++) {
-  firstArray.push(i);
-}
+$(document).ready(function() {
+  $("form#roboger").submit(function(event) {
+    event.preventDefault();
+    $("#beepBoopAnswer").show(); 
 
-alert(firstArray);
+  });
+});
