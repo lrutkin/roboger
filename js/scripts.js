@@ -4,32 +4,45 @@ const beep = "Beep!"
 const boop = "Boop!"
 const neighbor = "Won't you be my neighbor?"
 
+const mrRoboger = function() {
+
 const firstArray = [];
-const secondArray = [];
-const userInput=parseInt($("#input").val());
 
 for (var i = 0; i <= userInput; i++) {
   firstArray.push(i);
 }
-const inputString = firstArray.join("");
-const stringSplit = inputString.split("");
+let inputString = firstArray.toString("");
+let stringSplit = inputString.split(",");
 
-if (stringSplit.includes("1")) {
-    secondArray.push(beep);
-  } else if (stringSplit.includes("2")) {
-    secondArray.push(boop);
-  } else if (stringSplit.includes("3")) {
-    secondArray.push(neighbor);
-  } else {
-    secondArray.push("");
-  }
+  stringSplit.forEach(element); {
+    if (element.includes("1")) {
+        return userInput(beep);
+      } else if (element.includes("2")) {
+        return userInput(boop);
+      } else if (element.includes("3")) {
+        return userInput(neighbor);
+      } else {
+        return userInput("");
+      }
+  });
+
+});
+
+
 
 //UI LOGIC
 
 $(document).ready(function() {
+
+  const userInput = parseInt($("input#yourinput").val());
+  const result = mrRoboger(userInput);
+
   $("form#roboger").submit(function(event) {
     event.preventDefault();
     $("#beepBoopAnswer").show(); 
-    $(".result").text(secondArray);
+    $(".result").text(result);
+
   });
 });
+
+
