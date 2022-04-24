@@ -14,18 +14,18 @@ for (var i = 0; i <= userInput; i++) {
 let inputString = firstArray.toString("");
 let stringSplit = inputString.split(",");
 
-  stringSplit.forEach(element); {
-    if (element.includes("1")) {
-        return userInput(beep);
-      } else if (element.includes("2")) {
-        return userInput(boop);
-      } else if (element.includes("3")) {
-        return userInput(neighbor);
-      } else {
-        return userInput("");
-      }
+stringSplit.forEach(element); {
+  if (element.includes("1")) {
+      return userInput(beep);
+    } else if (element.includes("2")) {
+      return userInput(boop);
+    } else if (element.includes("3")) {
+      return userInput(neighbor);
+    } else {
+      return userInput("");
+    }
+    
   });
-
 });
 
 
