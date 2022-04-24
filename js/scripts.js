@@ -1,6 +1,8 @@
 const beep = "Beep!"
 const boop = "Boop!"
 const neighbor = "Won't you be my neighbor?"
+
+const firstArray = [];
 const input =  3
 const inputString = input.toString()
 
@@ -13,3 +15,10 @@ if (inputString.includes("1")) {
   } else {
     alert("Nothing happened.");
   }
+
+
+for (var i = 0; i <= input; i++) {
+  firstArray.push(i);
+}
+
+alert(firstArray);
